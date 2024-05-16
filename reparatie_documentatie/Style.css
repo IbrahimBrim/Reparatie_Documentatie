@@ -1,0 +1,617 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.normal-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px; /* Breedte van het menu */
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (min-width: 600px) {
+    .phonescreen {
+        display: none;
+    }
+}
+/* Media query voor schermen kleiner dan 600px */
+@media screen and (max-width: 600px) {
+    /* Verberg de gewone header */
+    .normal-header {
+        display: none;
+    }
+
+    /* Toon de header voor smartphones */
+    .phonescreen {
+        display: block;
+        margin-top: -22px;
+        z-index: 2;
+    }
+
+    header, navbar {
+        position: fixed;
+        width: 97%;
+        z-index: 1;
+    }
+}
+
+.logo-home {
+    height: 55px;
+    transition: transform 0.5s, filter 0.5s, margin 0.5s;
+}
+
+.category {
+    margin-bottom: 20px;
+}
+
+.loggen-button {
+    background-color: #50E3C2;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    position: absolute;
+    right: 0;
+}
+.button {
+    background-color: #50E3C2;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+  
+}
+@media screen and (max-width: 600px) {
+    .loggen-button {
+        padding: 5px 5px;
+        font-size: 10px;
+        margin: 13px 10px;
+    }
+}
+
+}
+
+.text {
+    grid-column: 1; /* Plaats de tekst in de eerste kolom */
+}
+
+.media {
+    grid-column: 2; /* Plaats de media in de tweede kolom */
+}
+
+.media-content {
+    max-width: 100%; /* Zorg ervoor dat de media de volledige breedte van de kolom gebruikt */
+    height: auto; /* Behoud de aspectverhouding van de media */
+}
+
+/* Stijl voor afbeelding tijdens hover */
+.logo-home:hover {
+    transform: scale(1.2) rotate(0deg); /* Zoom en draai de afbeelding */
+    filter: brightness(0); /* Maak de afbeelding iets helderder */
+    margin: 1px;
+}
+
+navbar {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+    /* width: 100%; */
+    height: 50px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+
+
+.home-content {
+    padding: 50px;
+    text-align: center;
+    /* width: 90%;
+    height: auto; */
+}
+
+    .home-content img {
+        width: 800px;
+        /* Voeg andere gewenste stijlen toe */
+    }
+
+.logo {
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .logo {
+        display: none;
+    }
+
+    .home-content img {
+        width: 300px;
+    }
+}
+
+main {
+    margin-left: 200px; /* Zorg ervoor dat de hoofdinhoud niet onder het menu valt */
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+.menu-button {
+    display: block;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    text-decoration: none;
+}
+
+    .menu-button:hover {
+        background-color: #555;
+    }
+
+.content {
+    font-size: 18px;
+}
+
+.hidden {
+    display: none;
+}
+
+
+.bottom-menu-button {
+    appearance: none;
+    backface-visibility: hidden;
+    background-color: #50E3C2;
+    border-radius: 8px;
+    border-style: none;
+    box-shadow: rgba(39, 174, 96, .15) 0 4px 9px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    letter-spacing: normal;
+    outline: none;
+    overflow: hidden;
+    padding: 13px 20px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transform: translate3d(0, 0, 0);
+    transition: all .3s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+    .bottom-menu-button:hover, .loggen-button:hover {
+        background-color: #2b7c6b;
+        opacity: 1;
+        transform: translateY(0);
+        transition-duration: .35s;
+    }
+
+    .bottom-menu-button:active, .loggen-button:hover {
+        transform: translateY(2px);
+        transition-duration: .35s;
+    }
+
+    .bottom-menu-button:hover {
+        box-shadow: rgba(39, 174, 96, .2) 0 6px 12px;
+    }
+
+h1,h2 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    width: 50%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"],
+select, input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+textarea {
+    width: 100%;
+    height: 90%;
+    max-width: 450px;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+label {
+    font-weight: bold;
+}
+
+/* Verberg standaard bestandsinvoer */
+input[type="file"] {
+    color: #000;
+    display: inline;
+}
+
+/* Stijl voor afbeeldingsvoorbeeld */
+#klacht_img_output {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Stijl voor videovoorbeeld */
+video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.media_item img,
+.media_item video {
+    max-width: 150px; /* Stel de maximale breedte in voor afbeeldingen en video's */
+    max-height: 150px; /* Stel de maximale hoogte in voor afbeeldingen en video's */
+}
+
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    background-color: #50E3C2;
+    color: #fff;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+    .custom-file-upload:hover {
+        background-color: #2980b9;
+    }
+
+    .custom-file-upload input[type="file"] {
+        display: none;
+    }
+
+.upload_section {
+    margin-bottom: 20px; /* Ruimte onder elke uploadsectie toevoegen */
+}
+
+.media_gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.media_item, .toevoegencontainermedia {
+    margin-right: 20px; /* Ruimte tussen elke media-item toevoegen */
+    margin-bottom: 20px; /* Ruimte onder elke media-item toevoegen */
+    position: relative; /* Relatieve positionering voor het plaatsen van de knop onder de media */
+    display: flex;
+}
+.descriptioncontainer {
+    width: -webkit-fill-available;
+}
+.mediacontainer {
+    width: -webkit-fill-available;
+    padding-left: 10px;
+}
+.delete_button {
+    position: absolute;
+    top: 5px; /* Afstand vanaf de bovenkant van de media-item */
+    right: 5px; /* Afstand vanaf de rechterkant van de media-item */
+    background-color: #50E3C2;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+    .delete_button:hover {
+        background-color: darkred;
+    }
+
+
+
+
+
+
+.button-49 {
+    padding: 0.6em 2em;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: #111;
+    margin: 2px;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+    .button-49:before {
+        content: "";
+        background: linear-gradient( 45deg, #50E3C2, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000 );
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        -webkit-filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing-button-85 20s linear infinite;
+        transition: opacity 0.3s ease-in-out;
+        border-radius: 10px;
+    }
+
+@keyframes glowing-button-85 {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.button-49:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+
+.button-86 {
+    all: unset;
+    margin: 10px 0;
+    width: 100px;
+    height: 15px;
+    font-size: 16px;
+    background: transparent;
+    border: none;
+    position: relative;
+    color: #f0f0f0;
+    cursor: pointer;
+    z-index:0;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+    .button-86::after,
+    .button-86::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: -99999;
+        transition: all .4s;
+    }
+
+    .button-86::before {
+        transform: translate(0%, 0%);
+        width: 100%;
+        height: 100%;
+        background: #50E3C2;
+        border-radius: 10px;
+    }
+
+    .button-86::after {
+        transform: translate(10px, 10px);
+        width: 35px;
+        height: 35px;
+        background: #2b7c6a3a;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border-radius: 50px;
+    }
+
+    .button-86:hover::before {
+        transform: translate(5%, 20%);
+        width: 110%;
+        height: 110%;
+    }
+
+    .button-86:hover::after {
+        border-radius: 10px;
+        transform: translate(0, 0);
+        width: 100%;
+        height: 100%;
+    }
+
+    .button-86:active::after {
+        transition: 0s;
+        transform: translate(0, 5%);
+    }
+
+.media-upload {
+    border: 2px solid #cdbbbb;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+
+.row {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px; /* Spacing tussen rijen */
+}
+
+@media screen and (max-width: 600px) {
+    .row {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    main {
+        margin-left: 0 !important;
+        padding: 10px;
+    }
+
+    .description-column {
+        width: 100% !important;
+    }
+
+    .media-column {
+        width: 100% !important;
+    }
+}
+
+.description-column {
+    width: 50%; /* Breedte van de linkerkolom */
+}
+
+.media-column {
+    width: 50%; /* Breedte van de rechterkolom */
+}
+
+.media-content {
+    max-width: 100%; /* Zorg ervoor dat de afbeelding of video de beschikbare ruimte niet overschrijdt */
+}
+
+.media-description {
+    margin: 0; /* Reset marge van de beschrijving */
+}
+
+
+/* phone screen */
+#menu-toggle {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 50px;
+    left: 25px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+    #menu-toggle input {
+        display: flex;
+        width: 40px;
+        height: 32px;
+        position: absolute;
+        cursor: pointer;
+        opacity: 0;
+        z-index: 2;
+    }
+
+    #menu-toggle span {
+        display: flex;
+        width: 29px;
+        height: 2px;
+        margin-bottom: 5px;
+        position: relative;
+        background: #ffffff;
+        border-radius: 3px;
+        z-index: 1;
+        transform-origin: 5px 0px;
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), background 0.5s cubic-bezier(0.77,0.2,0.05,1.0), opacity 0.55s ease;
+    }
+
+        #menu-toggle span:first-child {
+            transform-origin: 0% 0%;
+        }
+
+        #menu-toggle span:nth-last-child(2) {
+            transform-origin: 0% 100%;
+        }
+
+    #menu-toggle input:checked ~ span {
+        opacity: 1;
+        transform: rotate(45deg) translate(-3px, -1px);
+        background: #36383F;
+    }
+
+        #menu-toggle input:checked ~ span:nth-last-child(3) {
+            opacity: 0;
+            transform: rotate(0deg) scale(0.2, 0.2);
+        }
+
+        #menu-toggle input:checked ~ span:nth-last-child(2) {
+            transform: rotate(-45deg) translate(0, -1px);
+        }
+
+#menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Doorzichtige achtergrondkleur */
+    -webkit-backdrop-filter: blur(10px); /* Geblurde achtergrond */
+    backdrop-filter: blur(10px); /* Geblurde achtergrond */
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+
+#menu-toggle input:checked ~ ul {
+    transform: none;
+}
